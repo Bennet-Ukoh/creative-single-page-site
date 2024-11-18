@@ -14,7 +14,7 @@ export default function Header() {
     setToggle(!toggle);
   };
   return (
-    <header className="h-24 w-full justify-between items-center flex ">
+    <header className="h-24 w-full justify-between items-center flex lg:pl-40">
       <Link
         className="flex justify-start items-center gap-4 lg:w-1/2 ss:w-1/3 :w-full bg-white h-24 flex-1"
         href="/"
@@ -24,14 +24,16 @@ export default function Header() {
       </Link>
 
       <nav className="text-[16px] ss:flex hidden  bg-red lg:w-1/2 ss:w-2/3 h-24  lg:pl-10 ss:pl-6 ss:pr-4 lg:pr-2">
-        <ul className="flex  gap-8 text-white items-center flex-1">
+        <ul className="flex  gap-10 text-white items-center flex-1 ">
           {navLinks.map((link) => (
             <li key={link.id}>
-              <Link href={link.href}>{link.name}</Link>
+              <Link className="hover:font-bold" href={link.href}>
+                {link.name}
+              </Link>
             </li>
           ))}
           <Link href="/">
-            <button className="bg-black text-white  px-4 py-2">
+            <button className="bg-blackBg hover:bg-hoverBlack font-bold text-white  px-4 py-2">
               Schedule a call
             </button>
           </Link>
@@ -56,14 +58,18 @@ export default function Header() {
           <ul className="flex flex-col gap-6 text-white items-center">
             {navLinks.map((link) => (
               <li key={link.id}>
-                <Link href={link.href} onClick={handleToggle}>
+                <Link
+                  className="hover:font-bold"
+                  href={link.href}
+                  onClick={handleToggle}
+                >
                   {link.name}
                 </Link>
               </li>
             ))}
             <li className="mt-4">
               <Link href="/" onClick={handleToggle}>
-                <button className="bg-red text-white px-4 py-3">
+                <button className="bg-red text-white px-4 py-3 font-extrabold  hover:bg-hoverBlack">
                   Schedule a call
                 </button>
               </Link>
