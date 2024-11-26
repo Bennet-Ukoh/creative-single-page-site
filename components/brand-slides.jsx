@@ -39,37 +39,40 @@ export default function BrandSlides() {
   };
 
   return (
-    <section className="flex">
-      <div className="bg-black w-[735px] h-[528px] mt-[898px] pt-44">
-        <h3 className="text-5xl mx-auto font-extrabold text-white w-[445px]">
+    <section className="flex relative">
+      <div className="bg-blackBg z-50 lg:w-[735px] lg:h-[528px] sm:w-[390px] sm:h-[352px] lg:mt-[898px] sm:mt-[677px] mt-[426.5%] w-[375px] h-[272px] lg:pt-44 pt-16 sm:pt-24 absolute">
+        <h3 className="lg:text-5xl sm:text-3xl mx-auto font-extrabold text-white lg:w-[445px] sm:w-[281px] text-3xl sm:pl-0 pl-10 ">
           {slides[currentSlide].title}
         </h3>
-        <div className="flex justify-start items-center gap-x-4 mt-20 pl-[104px] ">
+        <div className="flex justify-start items-center gap-x-4 lg:mt-20 sm:mt-10 lg:pl-36 sm:pl-14 pl-10 mt-6">
           <FaCircleChevronLeft
-            className="text-red text-4xl cursor-pointer hover:text-hoverBg"
+            className="text-red sm:text-4xl text-3xl cursor-pointer hover:text-hoverBg"
             onClick={prevSlide}
           />
           <FaCircleChevronRight
-            className="text-red text-4xl cursor-pointer hover:text-hoverBg "
+            className="text-red sm:text-4xl text-3xl cursor-pointer hover:text-hoverBg "
             onClick={nextSlide}
           />
         </div>
       </div>
-      <div className="relative mt-[898px]">
+      <div className="relative lg:pl-[599px] sm:pl-[334px] sm:mt-[677px] lg:mt-[898px]  mt-[345%]">
         <Image
           src={slides[currentSlide].image}
           alt={slides[currentSlide].description}
+          className="sm:w-[438px] sm:h-[472px] lg:w-[897px] lg:h-[728px] h-[404px] w-[375px]"
         />
-        <div className="absolute top-[80%] left-[60%] text-white">
-          <h3 className="font-extrabold text-h3">
+        <div className="absolute lg:top-[85%] sm:top-[75%] top-[60%] left-[45%] sm:left-[65%] lg:left-[76%] text-white">
+          <h3 className="font-extrabold sm:text-lg lg:text-h3 text-sm">
             {slides[currentSlide].description}
           </h3>
-          <p className="text-end">{slides[currentSlide].year}</p>
+          <p className="text-end sm:text-lg text-sm">
+            {slides[currentSlide].year}
+          </p>
         </div>
         <Image
           src={whitecurl}
           alt="whitecurl"
-          className="absolute top-[30%] -left-16"
+          className="absolute z-50 top-[30%] left-[46%] sm:w-16 sm:h-7 lg:w-[134px] lg:h-[60px] hidden sm:block"
         />
       </div>
     </section>
