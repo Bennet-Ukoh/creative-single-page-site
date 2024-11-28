@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Container from "@/components/container";
+import Headers from "@/components/header";
+import Footer from "@/components/footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -11,6 +14,16 @@ const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
+});
+const commissioner = localFont({
+  src: [
+    { path: "./fonts/static/Commissioner-ExtraBold.ttf", weight: "800" },
+    { path: "./fonts/static/Commissioner-Bold.ttf", weight: "700" },
+    { path: "./fonts/static/Commissioner-Medium.ttf", weight: "500" },
+    { path: "./fonts/static/Commissioner-Regular.ttf", weight: "400" },
+    { path: "./fonts/static/Commissioner-Light.ttf", weight: "300" },
+  ],
+  variable: "--font-commissioner",
 });
 
 export const metadata: Metadata = {
@@ -26,9 +39,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased font-commissioner  `}
+        className={`${commissioner.variable} ${geistSans.variable} ${geistMono.variable} antialiased bg-gray-500`}
       >
-        {children}
+        <Container>
+          <Headers />
+          {children}
+          <Footer />
+        </Container>
       </body>
     </html>
   );

@@ -1,6 +1,8 @@
 import type { Config } from "tailwindcss";
 
 export default {
+  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -16,23 +18,9 @@ export default {
         hoverBg: "#FF9393",
         hoverBlack: "#434356",
       },
-      fontSize: {
-        h1: ["74px", "82px"],
-        h2: ["56px", "56px"],
-        h3: ["20px", "32px"],
-        regular: ["16px", "24px"],
-        body: ["18px", "32px"],
-      },
+
       fontFamily: {
-        commissioner: ["Commissioner", "sans-serif"],
-      },
-      screens: {
-        xs: "480px",
-        ss: "620px",
-        sm: "768px",
-        md: "1024px",
-        lg: "1440px",
-        xl: "1700px",
+        commissioner: ["var(--font-commissioner)", "sans-serif"],
       },
     },
   },
