@@ -39,12 +39,12 @@ export default function BrandSlides() {
   };
 
   return (
-    <section className="flex relative">
-      <div className="bg-blackBg z-50 lg:w-[735px] lg:h-[528px] sm:w-[390px] sm:h-[352px] lg:mt-[898px] sm:mt-[677px] mt-[426.5%] w-[375px] h-[272px] lg:pt-44 pt-16 sm:pt-24 absolute">
-        <h3 className="lg:text-5xl sm:text-3xl mx-auto font-extrabold text-white lg:w-[445px] sm:w-[281px] text-3xl sm:pl-0 pl-10 ">
+    <section className=" relative">
+      <div className="absolute lg:pt-40 md:pt-32 bg-blackBg z-50 lg:w-[50%] lg:h-[33rem] md:w-[24rem] md:h-[22rem] lg:mt-[50.03rem] md:mt-[42.4rem]">
+        <h3 className="lg:text-6xl sm:text-3xl mx-auto font-extrabold text-white lg:w-[28rem] sm:w-[18rem] text-3xl sm:pl-0 pl-10 ">
           {slides[currentSlide].title}
         </h3>
-        <div className="flex justify-start items-center gap-x-4 lg:mt-20 sm:mt-10 lg:pl-36 sm:pl-14 pl-10 mt-6">
+        <div className="flex justify-start items-center gap-x-4 lg:mt-20 sm:mt-10 lg:pl-[7.3rem] sm:pl-14 pl-10 mt-6">
           <FaCircleChevronLeft
             className="text-red sm:text-4xl text-3xl cursor-pointer hover:text-hoverBg"
             onClick={prevSlide}
@@ -55,13 +55,13 @@ export default function BrandSlides() {
           />
         </div>
       </div>
-      <div className="relative lg:pl-[599px] sm:pl-[334px] sm:mt-[677px] lg:mt-[898px]  mt-[345%]">
+      <div className="w-full md:mt-[43rem] lg:mt-[50rem]  mt-[345%] absolute ">
         <Image
           src={slides[currentSlide].image}
           alt={slides[currentSlide].description}
-          className="sm:w-[438px] sm:h-[472px] lg:w-[897px] lg:h-[728px] h-[404px] w-[375px]"
+          className="absolute right-0 lg:w-[60%] md:w-[30rem] "
         />
-        <div className="absolute lg:top-[85%] sm:top-[75%] top-[60%] left-[45%] sm:left-[65%] lg:left-[76%] text-white">
+        <div className="absolute lg:mt-[32rem] lg:ml-[28rem] md:mt-72 md:ml-[11rem] top-[60%] left-[45%]  text-white">
           <h3 className="font-extrabold sm:text-lg lg:text-h3 text-sm">
             {slides[currentSlide].description}
           </h3>
@@ -72,7 +72,7 @@ export default function BrandSlides() {
         <Image
           src={whitecurl}
           alt="whitecurl"
-          className="absolute z-50 top-[30%] left-[46%] sm:w-16 sm:h-7 lg:w-[134px] lg:h-[60px] hidden sm:block"
+          className="absolute z-50 lg:mt-44 md:mt-32 left-[45%] md:w-16 md:h-7 lg:w-32 lg:h-12 hidden sm:block"
         />
       </div>
     </section>

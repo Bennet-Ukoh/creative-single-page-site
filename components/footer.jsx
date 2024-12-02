@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-white sm:my-24 mt-64 sm:mt-28  relative">
+    <footer className="bg-white sm:my-24 lg:mt-[115%] md:pb-16 md:mt-[150%]  relative">
       <Image
         src={redCurl}
         alt="footer logo"
