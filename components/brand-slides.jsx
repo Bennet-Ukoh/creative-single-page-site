@@ -40,11 +40,11 @@ export default function BrandSlides() {
 
   return (
     <section className=" relative">
-      <div className="absolute lg:pt-40 md:pt-32 bg-blackBg z-50 lg:w-[50%] lg:h-[33rem] md:w-[24rem] md:h-[22rem] lg:mt-[50.03rem] md:mt-[42.4rem]">
-        <h3 className="lg:text-6xl sm:text-3xl mx-auto font-extrabold text-white lg:w-[28rem] sm:w-[18rem] text-3xl sm:pl-0 pl-10 ">
+      <div className="absolute lg:pt-40 md:pt-32 bg-blackBg z-50 lg:w-[50%] lg:h-[33rem] md:w-[24rem] md:h-[22rem] lg:mt-[50.03rem] md:mt-[42.4rem] mt-[76.1rem] h-[17rem] pt-20">
+        <h3 className="lg:text-6xl sm:text-3xl mx-auto font-extrabold text-white lg:w-[28rem] md:w-[18rem] text-3xl md:pl-0 pl-6 ">
           {slides[currentSlide].title}
         </h3>
-        <div className="flex justify-start items-center gap-x-4 lg:mt-20 sm:mt-10 lg:pl-[7.3rem] sm:pl-14 pl-10 mt-6">
+        <div className="flex justify-start items-center gap-x-4 lg:mt-20 md:mt-10 lg:pl-[7.3rem] md:pl-14 pl-6 mt-6">
           <FaCircleChevronLeft
             className="text-red sm:text-4xl text-3xl cursor-pointer hover:text-hoverBg"
             onClick={prevSlide}
@@ -55,13 +55,13 @@ export default function BrandSlides() {
           />
         </div>
       </div>
-      <div className="w-full md:mt-[43rem] lg:mt-[50rem]  mt-[345%] absolute ">
+      <div className="w-full md:mt-[43rem] lg:mt-[50rem]  mt-[243.7%] absolute ">
         <Image
           src={slides[currentSlide].image}
           alt={slides[currentSlide].description}
           className="absolute right-0 lg:w-[60%] md:w-[30rem] "
         />
-        <div className="absolute lg:mt-[32rem] lg:ml-[28rem] md:mt-72 md:ml-[11rem] top-[60%] left-[45%]  text-white">
+        <div className="absolute lg:mt-[32rem] lg:ml-[28rem] md:mt-72 md:ml-[11rem] mt-56 left-[46%]  text-white">
           <h3 className="font-extrabold sm:text-lg lg:text-h3 text-sm">
             {slides[currentSlide].description}
           </h3>

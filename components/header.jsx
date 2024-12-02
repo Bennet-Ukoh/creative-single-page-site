@@ -38,7 +38,7 @@ export default function Header() {
       </nav>
       {/* Mobile Menu Icon */}
       <div
-        className="flex md:hidden cursor-pointer mr-6 justify-end items-center"
+        className="flex md:hidden cursor-pointer mr-6 justify-end items-center h-32"
         onClick={handleToggle}
       >
         <Image

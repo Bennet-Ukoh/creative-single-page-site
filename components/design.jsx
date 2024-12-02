@@ -5,11 +5,11 @@ import mobileDesignImage from "@/public/images/mobile-pic-4.jpg";
 
 export default function Design() {
   return (
-    <section className="flex justify-center">
+    <section className="flex md:flex-row flex-col justify-center md:mt-0 mt-20">
       <Image
         src={mobileDesignImage}
         alt="Design Image"
-        className="sm:hidden  mx-auto w-full"
+        className="md:hidden block  mx-auto w-full"
       />
       <Image
         src={DesignImage}
@@ -19,7 +19,7 @@ export default function Design() {
 
       <div className="relative bg-blackBg  md:w-[50%] lg:h-[42rem] md:h-[36rem] w-[375px] h-[377px]">
         <Image
-          className="absolute lg:top-52 md:top-40 top-[93%] lg:-left-16 md:-left-5 z-50 lg:w-32 lg:h-14 md:w-12 md:h-7 w-16 h-7 left-6"
+          className="absolute lg:top-52 md:top-40 -top-3 lg:-left-16 md:-left-5 z-50 lg:w-32 lg:h-14 md:w-12 md:h-7 w-16 h-7 left-6"
           src={RedCurl}
           alt="redcurl"
         />
@@ -27,7 +27,7 @@ export default function Design() {
           <h2 className="lg:text-7xl md:text-5xl text-4xl text-white font-extrabold">
             <span className="text-red">Design</span> is strategic.
           </h2>
-          <p className="text-white lg:text-lg md:text-base text-sm md:w-[90%] w-[327px] py-6">
+          <p className="text-white lg:text-lg md:text-base text-[0.93rem] md:w-[90%] w-[20rem] py-6">
             “A well-crafted design strategy consistently produces desired
             outcomes and brand awareness. We are firm believers that success
             lies in creative collaboration with our clients.”
@@ -37,11 +37,11 @@ export default function Design() {
           </button>
         </div>
       </div>
-      <div className="bg-red lg:w-[60%] lg:h-[63rem] md:w-[30rem] sm:h-[50rem] absolute lg:top-[226%] md:top-[123.4%] top-[288%] w-[375px] h-[918px] md:right-0 lg:py-20 md:py-10 py-20 pl-10">
+      <div className="bg-red lg:w-[60%] lg:h-[63rem] md:w-[30rem] md:h-[50rem] absolute lg:top-[226%] md:top-[123.4%] top-[191%] w-[375px] h-[918px] md:right-0 lg:py-20 md:py-10 py-20 pl-6">
         <h2 className="text-white font-extrabold block md:hidden w-[327px] text-4xl absolute">
           Our approach for creating a winning brand
         </h2>
-        <div className="text-white lg:w-[31.5rem] md:w-[23rem] relative mx-auto lg:mt-16 md:mt-14 mt-44">
+        <div className="text-white lg:w-[31.5rem] md:w-[23rem]  relative mx-auto lg:mt-16 md:mt-14 mt-44">
           <h1 className="md:text-7xl text-6xl font-extrabold opacity-25">01</h1>
           <h3 className="text-xl md:text-2xl font-extrabold absolute md:top-6 top-4 left-2 md:left-6 lg:left-14">
             Brand Strategy
